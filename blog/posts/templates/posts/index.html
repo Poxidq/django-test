@@ -1,0 +1,31 @@
+{% extends "posts/base.html" %}
+
+{%block title%}Posts {%endblock title%}
+{%block content%}
+{% if posts %}
+<div class="container">
+    {% for post in posts %}
+    <div class="card mb-3 post_card">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToeoac8pQDveN6ZIppCUx8_C-WX9qlfFuyyEhk2Z4jdQ&s"
+                    class="img-fluid rounded-start" alt="..." />
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <p class="card-text">{{post.body}}</p>
+                    <p class="card-text">
+                        <a href="/posts/{{post.id}}" class="btn btn-primary">Details</a>
+                        <small class="text-body-secondary">{{post.pub_date}}</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>Публикаций: 0</p>
+{% endif%}
+{%endblock content%}

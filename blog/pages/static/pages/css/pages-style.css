@@ -1,0 +1,13 @@
+.home-logo {
+  width: 20%;
+  margin-left: 30px;
+  margin-top: 50px;
+  -webkit-box-shadow: -1px 1px 44px 17px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: -1px 1px 44px 17px rgba(34, 60, 80, 0.2);
+  box-shadow: -1px 1px 44px 17px rgba(34, 60, 80, 0.2);
+}
+
+.tenor_gif {
+    width: 300px !important;
+    
+}
